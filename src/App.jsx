@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import CloudLogos from './components/CloudLogos'
@@ -7,8 +8,13 @@ import Calculator from './components/Calculator'
 import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import Footer from './components/Footer'
+import { initializeLogs } from './utils/dom'
 
 function App() {
+  useEffect(() => {
+    initializeLogs()
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
